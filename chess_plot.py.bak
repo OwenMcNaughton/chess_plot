@@ -1,0 +1,18 @@
+
+def uci_to_line(uci):
+	x1 = uci.from_square % 8
+	y1 = uci.from_square // 8
+	x2 = uci.to_square % 8
+	y2 = uci.to_square // 8
+	return [x1, x2], [y1, y2]
+	
+	
+def draw_line(uci):
+	a, b = uci_to_line(uci)
+	plt.plot(a, b)
+	
+	
+	
+def plot_game(game):
+	for move in game.board():
+	
